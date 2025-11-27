@@ -27,21 +27,17 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: Twitter, href: '#', label: 'Twitter', color: 'hover:text-blue-400' },
-    { icon: Github, href: '#', label: 'GitHub', color: 'hover:text-slate-900' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn', color: 'hover:text-blue-600' },
-    { icon: Youtube, href: '#', label: 'YouTube', color: 'hover:text-red-600' },
+    { icon: Github, href: '#', label: 'GitHub', color: 'hover:text-slate-200' },
+    { icon: Linkedin, href: '#', label: 'LinkedIn', color: 'hover:text-blue-500' },
+    { icon: Youtube, href: '#', label: 'YouTube', color: 'hover:text-red-500' },
   ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+    <footer className="relative bg-slate-900 text-white overflow-hidden border-t border-slate-800">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-grid-slate-700/25 [mask-image:linear-gradient(0deg,transparent,rgba(255,255,255,0.3))]"></div>
+      <div className="absolute inset-0 bg-grid-slate-700/25 [mask-image:linear-gradient(0deg,transparent,rgba(255,255,255,0.1))]"></div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl"></div>
-
-      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
         {/* Newsletter Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -83,14 +79,14 @@ const Footer = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="col-span-2"
           >
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
-                <Sparkles className="w-6 h-6 text-white" />
+            <div className="flex items-center gap-2.5 mb-4">
+              <div className="w-9 h-9 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center shadow-md">
+                <Sparkles className="w-5 h-5 text-white" />
               </div>
-              <span className="text-2xl font-bold">AutoTask</span>
+              <span className="text-xl font-black">AutoTask</span>
             </div>
-            <p className="text-slate-400 leading-relaxed mb-6 max-w-xs">
-              AI-powered task management that transforms how you work. Smarter, faster, better.
+            <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-xs">
+              AI-powered task management that transforms your workflow.
             </p>
             
             {/* Social Links */}

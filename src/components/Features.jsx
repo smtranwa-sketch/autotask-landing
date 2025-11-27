@@ -63,36 +63,36 @@ const item = {
 
 const Features = () => {
   return (
-    <section className="relative py-24 lg:py-32 bg-white overflow-hidden">
+    <section className="relative py-20 lg:py-28 bg-white overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.5))] -z-10"></div>
+      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16 lg:mb-20"
+          transition={{ duration: 0.7 }}
+          className="text-center mb-14 lg:mb-20"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-4"
+            className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm font-bold mb-5"
           >
-            Features
+            FEATURES
           </motion.div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6">
-            Everything you need to
-            <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              supercharge productivity
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 mb-5 leading-tight">
+            Everything You Need to
+            <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">
+              Supercharge Productivity
             </span>
           </h2>
-          <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Powerful features designed to help you and your team accomplish more in less time
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            Powerful AI-driven features designed to help you and your team work smarter and accomplish more.
           </p>
         </motion.div>
 
@@ -108,10 +108,10 @@ const Features = () => {
             <motion.div
               key={index}
               variants={item}
-              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              whileHover={{ y: -10, transition: { duration: 0.3 } }}
               className="group relative"
             >
-              <div className="relative h-full bg-white rounded-2xl p-8 shadow-lg shadow-slate-200/50 border border-slate-200 hover:shadow-2xl hover:shadow-slate-300/50 transition-all duration-500 overflow-hidden">
+              <div className="relative h-full bg-white rounded-2xl p-7 shadow-lg shadow-slate-200/50 border border-slate-200/80 hover:shadow-2xl hover:shadow-indigo-500/10 hover:border-indigo-200 transition-all duration-500 overflow-hidden">
                 {/* Gradient Background on Hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${feature.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
 

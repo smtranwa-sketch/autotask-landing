@@ -1,16 +1,16 @@
 import { motion } from 'framer-motion';
-import { Sparkles, ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Play, CheckCircle2, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-blue-50">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-blue-400/30 to-indigo-600/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-purple-400/30 to-pink-600/30 rounded-full blur-3xl animate-pulse delay-700"></div>
+        <div className="absolute top-0 -right-40 w-[600px] h-[600px] bg-gradient-to-br from-blue-400/20 to-indigo-600/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-32 -left-32 w-[500px] h-[500px] bg-gradient-to-tr from-purple-400/20 to-pink-600/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 lg:py-32">
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-8 lg:px-16 py-16 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <motion.div
@@ -35,13 +35,13 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 leading-tight mb-6"
+              className="text-5xl sm:text-6xl lg:text-7xl font-black text-slate-900 leading-[1.1] mb-6"
             >
-              Transform Your
-              <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Productivity
+              Work Smarter,
+              <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">
+                Not Harder
               </span>
-              with AI
+              with AI Tasks
             </motion.h1>
 
             {/* Sub-text */}
@@ -49,10 +49,9 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-lg sm:text-xl text-slate-600 leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0"
+              className="text-lg sm:text-xl text-slate-600 leading-relaxed mb-8 max-w-md mx-auto lg:mx-0"
             >
-              AutoTask intelligently organizes, prioritizes, and automates your workflow. 
-              Let AI handle the mundane while you focus on what truly matters.
+              AutoTask uses AI to intelligently organize, prioritize, and automate your daily workflow—so you can focus on what really matters.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -73,24 +72,29 @@ const Hero = () => {
               </button>
             </motion.div>
 
-            {/* Social Proof */}
+            {/* Trust Indicators */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.8 }}
-              className="mt-12 flex items-center justify-center lg:justify-start gap-6 text-sm text-slate-600"
+              className="mt-10 flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-6 text-sm"
             >
-              <div className="flex -space-x-3">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 border-2 border-white shadow-lg"
-                  ></div>
-                ))}
+              <div className="flex items-center gap-2">
+                <div className="flex -space-x-2">
+                  {[1, 2, 3, 4].map((i) => (
+                    <div
+                      key={i}
+                      className="w-9 h-9 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 border-2 border-white shadow-md"
+                    ></div>
+                  ))}
+                </div>
+                <div className="text-slate-700">
+                  <span className="font-bold text-slate-900">12,000+</span> users
+                </div>
               </div>
-              <div>
-                <p className="font-semibold text-slate-900">10,000+ teams</p>
-                <p className="text-slate-500">trust AutoTask daily</p>
+              <div className="flex items-center gap-2 text-slate-700">
+                <CheckCircle2 className="w-5 h-5 text-green-600" />
+                <span>Free 14-day trial</span>
               </div>
             </motion.div>
           </motion.div>
@@ -99,45 +103,71 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4, duration: 1 }}
-            className="relative hidden lg:block"
+            transition={{ delay: 0.5, duration: 0.9 }}
+            className="relative hidden lg:flex items-center justify-center"
           >
-            <div className="relative">
-              {/* Main Card */}
+            <div className="relative w-full max-w-lg">
+              {/* Main Dashboard Card */}
               <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                className="relative bg-white rounded-3xl shadow-2xl shadow-slate-900/10 p-8 border border-slate-200"
+                animate={{ y: [0, -12, 0] }}
+                transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+                className="relative bg-white rounded-3xl shadow-2xl shadow-indigo-500/20 p-8 border border-slate-200/60"
               >
-                <div className="space-y-4">
-                  <div className="h-4 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full w-3/4"></div>
-                  <div className="h-4 bg-slate-200 rounded-full w-full"></div>
-                  <div className="h-4 bg-slate-200 rounded-full w-5/6"></div>
-                  <div className="grid grid-cols-3 gap-4 mt-8">
-                    <div className="h-20 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl"></div>
-                    <div className="h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl"></div>
-                    <div className="h-20 bg-gradient-to-br from-indigo-100 to-blue-100 rounded-xl"></div>
+                {/* Header */}
+                <div className="flex items-center justify-between mb-6">
+                  <div className="h-3 w-32 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full"></div>
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                    <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
                   </div>
+                </div>
+                
+                {/* Task Items */}
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl">
+                    <div className="w-5 h-5 rounded bg-blue-500"></div>
+                    <div className="flex-1 h-3 bg-blue-300/40 rounded-full"></div>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl">
+                    <div className="w-5 h-5 rounded bg-slate-300"></div>
+                    <div className="flex-1 h-3 bg-slate-300/40 rounded-full"></div>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl">
+                    <div className="w-5 h-5 rounded bg-slate-300"></div>
+                    <div className="flex-1 h-3 bg-slate-300/40 rounded-full w-2/3"></div>
+                  </div>
+                </div>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-3 gap-3 mt-6">
+                  <div className="h-16 bg-gradient-to-br from-violet-100 to-purple-100 rounded-lg"></div>
+                  <div className="h-16 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-lg"></div>
+                  <div className="h-16 bg-gradient-to-br from-pink-100 to-rose-100 rounded-lg"></div>
                 </div>
               </motion.div>
 
-              {/* Floating Badge */}
+              {/* Floating AI Badge */}
               <motion.div
-                animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
-                transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-                className="absolute -top-6 -right-6 bg-gradient-to-r from-green-400 to-emerald-500 text-white px-6 py-3 rounded-2xl shadow-xl font-semibold text-sm"
+                animate={{ y: [0, -10, 0], rotate: [0, 3, 0] }}
+                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                className="absolute -top-4 -right-4 bg-gradient-to-r from-emerald-400 to-green-500 text-white px-5 py-2.5 rounded-full shadow-xl font-bold text-sm flex items-center gap-2"
               >
-                ✓ AI Powered
+                <Sparkles className="w-4 h-4" />
+                AI Powered
               </motion.div>
 
-              {/* Floating Stats */}
+              {/* Floating Stats Card */}
               <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{ repeat: Infinity, duration: 3, ease: "easeInOut", delay: 0.5 }}
-                className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 border border-slate-200"
+                animate={{ y: [0, 8, 0] }}
+                transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut", delay: 0.5 }}
+                className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-2xl p-4 border border-slate-200"
               >
-                <p className="text-2xl font-bold text-slate-900">95%</p>
-                <p className="text-sm text-slate-600">Time Saved</p>
+                <div className="flex items-end gap-2">
+                  <p className="text-3xl font-black bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">98%</p>
+                  <p className="text-xs text-slate-600 pb-1">faster</p>
+                </div>
+                <p className="text-xs text-slate-500 mt-0.5">task completion</p>
               </motion.div>
             </div>
           </motion.div>

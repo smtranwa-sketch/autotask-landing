@@ -42,7 +42,7 @@ const item = {
 
 const Testimonials = () => {
   return (
-    <section className="relative py-24 lg:py-32 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 overflow-hidden">
+    <section className="relative py-20 lg:py-28 bg-gradient-to-br from-slate-50 via-blue-50/50 to-indigo-50/30 overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-blue-300/20 to-indigo-400/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-96 h-96 bg-gradient-to-tr from-purple-300/20 to-pink-400/20 rounded-full blur-3xl"></div>
@@ -61,18 +61,18 @@ const Testimonials = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-block px-4 py-2 bg-indigo-100 text-indigo-700 rounded-full text-sm font-semibold mb-4"
+            className="inline-block px-4 py-1.5 bg-indigo-100 text-indigo-700 rounded-full text-sm font-bold mb-5"
           >
-            Testimonials
+            TESTIMONIALS
           </motion.div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6">
-            Loved by thousands of
-            <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              professionals worldwide
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 mb-5 leading-tight">
+            Loved by Thousands
+            <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">
+              of Professionals
             </span>
           </h2>
-          <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            See what our users have to say about their experience with AutoTask
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            Don't take our word for it—hear what real users have to say about AutoTask.
           </p>
         </motion.div>
 
@@ -88,10 +88,10 @@ const Testimonials = () => {
             <motion.div
               key={index}
               variants={item}
-              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              whileHover={{ y: -10, transition: { duration: 0.3 } }}
               className="group"
             >
-              <div className="relative h-full bg-white rounded-3xl p-8 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:shadow-slate-300/70 transition-all duration-500 border border-slate-100">
+              <div className="relative h-full bg-white rounded-2xl p-8 shadow-xl shadow-slate-200/60 hover:shadow-2xl hover:shadow-indigo-500/20 transition-all duration-500 border-2 border-slate-100 hover:border-indigo-100">
                 {/* Quote Icon */}
                 <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity duration-300">
                   <Quote className="w-16 h-16 text-indigo-600" fill="currentColor" />

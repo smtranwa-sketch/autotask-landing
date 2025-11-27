@@ -100,18 +100,18 @@ const Pricing = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4"
+            className="inline-block px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-bold mb-5"
           >
-            Pricing
+            PRICING
           </motion.div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6">
-            Choose the perfect plan
-            <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              for your workflow
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 mb-5 leading-tight">
+            Simple, Transparent
+            <span className="block bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-600 bg-clip-text text-transparent">
+              Pricing for Everyone
             </span>
           </h2>
-          <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Start free, upgrade when you need. No hidden fees, cancel anytime.
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            Start free, scale as you grow. No hidden fees. Cancel anytime.
           </p>
         </motion.div>
 
@@ -132,18 +132,18 @@ const Pricing = () => {
             >
               {/* Most Popular Badge */}
               {plan.popular && (
-                <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-20">
-                  <div className={`px-6 py-2 bg-gradient-to-r ${plan.gradient} text-white text-sm font-bold rounded-full shadow-lg`}>
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
+                  <div className={`px-5 py-2 bg-gradient-to-r ${plan.gradient} text-white text-xs font-extrabold rounded-full shadow-xl uppercase tracking-wide`}>
                     ⭐ Most Popular
                   </div>
                 </div>
               )}
 
               <div
-                className={`relative h-full bg-white rounded-3xl p-8 border-2 transition-all duration-500 ${
+                className={`relative h-full bg-white rounded-2xl p-8 border-2 transition-all duration-500 ${
                   plan.popular
-                    ? 'border-blue-600 shadow-2xl shadow-blue-500/20 scale-105 lg:scale-110'
-                    : 'border-slate-200 shadow-xl shadow-slate-200/50 hover:shadow-2xl hover:border-slate-300'
+                    ? 'border-indigo-600 shadow-2xl shadow-indigo-500/30 scale-105 lg:scale-110 ring-2 ring-indigo-100'
+                    : 'border-slate-200 shadow-lg shadow-slate-200/50 hover:shadow-xl hover:border-indigo-200'
                 }`}
               >
                 {/* Plan Icon */}
