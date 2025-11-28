@@ -81,7 +81,7 @@ npm run build
 npm run preview
 ```
 
-The landing page will be available at: **http://localhost:5173/**
+The landing page will be available at: **https://autotask-landing.vercel.app/**
 
 ## 📁 Project Structure
 
